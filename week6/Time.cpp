@@ -97,19 +97,11 @@ void Time::addMinutes(int minutes)
         newMinute -= 60;
         newHour++;
     }
-    while (newMinute < 0)
-    {
-        newMinute += 60;
-        newHour--;
-    }
     while (newHour >= 24)
     {
         newHour -= 24;
     }
-    while (newHour < 0)
-    {
-        newHour += 24;
-    }
+
     setHour(newHour);
     setMinute(newMinute);
 }
